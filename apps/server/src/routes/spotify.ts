@@ -473,10 +473,10 @@ router.post("/playlist/create", logged, withHttpClient, async (req, res) => {
       res.status(404).end();
       return;
     }
-    const mostListened = await getMostListenedSongOfArtist(user, artist.id)
+    const mostListened = await getMostListenedSongOfArtist(user, artist.id, body.nb);
     spotifyIds = mostListened.map(item => item.track.id);
     if (!playlistName) {
-      playlistName = `My top of ${artist.id}`;
+      playlistName = `My top of ${artist.name}`;
     }
   } else {
     if (!playlistName) {
