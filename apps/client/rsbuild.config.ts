@@ -5,30 +5,7 @@ import { pluginBabel } from "@rsbuild/plugin-babel";
 export default defineConfig({
   html: { template: "./public/index.html" },
   output: { distPath: "./build" },
-  tools: {
-    rspack: {
-      optimization: {
-        splitChunks: {
-          cacheGroups: {
-            mui: {
-              name: "lib-mui",
-              test: /[\\/]node_modules[\\/]@mui[\\/]/,
-              chunks: "all",
-              enforce: true,
-              priority: 40,
-            },
-            emotion: {
-              name: "lib-emotion",
-              test: /[\\/]node_modules[\\/]@emotion[\\/]/,
-              chunks: "all",
-              enforce: true,
-              priority: 30,
-            },
-          },
-        },
-      },
-    },
-  },
+  performance: { chunkSplit: { strategy: "all-in-one" }, },
   plugins: [
     pluginReact({ fastRefresh: true }),
     pluginBabel({
