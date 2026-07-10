@@ -136,8 +136,8 @@ export default function PlaylistDialog() {
       {(context?.type === "top" ||
         context?.type === "affinity" ||
         context?.type === "top-artist") && (
-        <CountChooser value={context.nb} setValue={changeNumber} />
-      )}
+          <CountChooser value={context.nb} setValue={changeNumber} />
+        )}
       <div className={s.button}>
         <LoadingButton
           loading={loading}

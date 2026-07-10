@@ -1,4 +1,4 @@
-import { Select, MenuItem } from "@mui/material";
+import { MenuItem, Select } from "@mui/material";
 import { useSelector } from "react-redux";
 import Text from "../../../components/Text";
 import TitleCard from "../../../components/TitleCard";

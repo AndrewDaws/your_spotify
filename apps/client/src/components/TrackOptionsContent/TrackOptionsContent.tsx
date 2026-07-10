@@ -3,7 +3,7 @@ import { setPlaylistContext } from "../../services/redux/modules/playlist/reduce
 import { playTrack } from "../../services/redux/modules/user/thunk";
 import { useAppDispatch } from "../../services/redux/tools";
 import { Track } from "../../services/types";
-import { MenuItem } from "../MenuItem/MenuItem";
+import { MenuItem } from "../ui/MenuItem/MenuItem";
 
 interface TrackOptionsContentProps {
   onClose: () => void;

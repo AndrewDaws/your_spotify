@@ -13,7 +13,7 @@ import LoadingImplementedChart from "../LoadingImplementedChart";
 import { ImplementedChartProps } from "../types";
 import { DateFormatter } from "../../../services/date";
 
-interface BestOfHourProps extends ImplementedChartProps {}
+interface BestOfHourProps extends ImplementedChartProps { }
 
 enum Element {
   ARTIST = "artists",
